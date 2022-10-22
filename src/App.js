@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Home from './components/Home/Home/Home';
-import About from './components/About/About';
-import NotFound from './components/NotFound/NotFound';
-import Header from './components/Header/Header/Header';
-import Users from './components/Users/Users/Users';
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
+import NotFound from './Pages/NotFound/NotFound';
+import Header from './Pages/Shared/Header/Header';
+import Users from './Pages/Users/Users';
 
 function App() {
   return (

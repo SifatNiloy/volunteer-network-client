@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import NotFound from './Pages/NotFound/NotFound';
 import Header from './Pages/Shared/Header/Header';
 import Users from './Pages/Users/Users';
 import Services from './Pages/Home/Services/Services';
+import Home from './Pages/Home/Home/Home';
+import Footer from './Pages/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/services' element={<Services></Services>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

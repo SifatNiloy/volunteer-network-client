@@ -4,10 +4,10 @@ const Service = ({ service }) => {
     const { name, img } = service;
     return (
         <div className='g-5 col-sm-12 col-md-6 col-lg-4'>
-            <div class="card " style={{ width: "23rem" }}>
-                <img src={img} class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <p class="card-text">{name}</p>
+            <div className="card " style={{ width: "23rem" }}>
+                <img src={img} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <p className="card-text">{name}</p>
                 </div>
             </div>
         </div>

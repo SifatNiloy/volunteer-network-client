@@ -6,6 +6,7 @@ import About from './Pages/About/About';
 import NotFound from './Pages/NotFound/NotFound';
 import Header from './Pages/Shared/Header/Header';
 import Users from './Pages/Users/Users';
+import Services from './Pages/Home/Services/Services';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/users' element={<Users></Users>}></Route>
+        <Route path='/services' element={<Services></Services>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

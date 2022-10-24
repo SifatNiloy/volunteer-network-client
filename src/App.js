@@ -1,4 +1,4 @@
-
+import { getAuth } from "firebase/auth";
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import About from './Pages/About/About';
@@ -11,7 +11,8 @@ import Footer from './Pages/Shared/Footer/Footer';
 import ServiceDetail from './Pages/Home/ServiceDetail/ServiceDetail';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
-
+import app from "./firebase.init";
+// const auth = getAuth(app);
 function App() {
   return (
     <div className="App">

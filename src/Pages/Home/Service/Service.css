@@ -1,6 +1,10 @@
-.service {
+/* .service {
     text-align: center;
     border: 1px solid lightgray;
     border-radius: 20px;
     padding-bottom: 10px;
+} */
+
+.service p:hover {
+    cursor: pointer;
 }

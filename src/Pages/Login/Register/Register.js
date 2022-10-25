@@ -17,6 +17,10 @@ const Register = () => {
     const navigateLogin = event => {
         navigate('/login');
     }
+    if (user) {
+        navigate('/home')
+    }
+
     const handleSubmit = event => {
         event.preventDefault();
         const name = nameRef.current.value;

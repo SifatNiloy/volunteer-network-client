@@ -12,7 +12,7 @@ const Service = ({ service }) => {
             <div className="card " style={{ width: "20rem" }}>
                 <img src={img} className="card-img-top" alt="..." />
                 <div className="card-body">
-                    <p onClick={() => navigateToServiceDetail(id)} className="card-text">{name}</p>
+                    <p onClick={() => navigateToServiceDetail(id)} className="text-center text-success">{name}</p>
                 </div>
             </div>
         </div>

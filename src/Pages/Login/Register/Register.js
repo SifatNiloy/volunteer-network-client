@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 const Register = () => {
+    const [agree, setAgree] = useState(false);
     const [
         createUserWithEmailAndPassword,
         user,
@@ -26,7 +27,10 @@ const Register = () => {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        createUserWithEmailAndPassword(email, password);
+        const agree = event.target.terms.checked;
+        if (agree) {
+            createUserWithEmailAndPassword(email, password);
+        }
     }
     return (
         <div className='container w-50 mx-auto'>
@@ -47,13 +51,12 @@ const Register = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Accept terms and conditions" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
+                <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
+                <label className={!agree ? 'ps-2 text-muted opacity-75' : 'ps-2 text-primary'}> Accept terms and conditions</label><br /><br />
+                <Button disabled={!agree} className='d-block mx-auto w-50' variant="primary" type="submit">
                     Submit
                 </Button>
-            </Form>
+            </Form> <br />
             <p>Already have an account? <Link to='/login' className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
         </div>
     );

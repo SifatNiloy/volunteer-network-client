@@ -14,6 +14,7 @@ import Register from './Pages/Login/Register/Register';
 import app from "./firebase.init";
 import Checkout from "./Pages/Checkout/Checkout";
 import RequireAuth from "./Pages/Login/RequireAuth/RequireAuth";
+import AddService from "./Pages/AddService/AddService";
 // const auth = getAuth(app);
 function App() {
   return (
@@ -31,6 +32,11 @@ function App() {
         <Route path="/checkout" element={
           <RequireAuth>
             <Checkout></Checkout>
+          </RequireAuth>
+        }></Route>
+        <Route path="/addservice" element={
+          <RequireAuth>
+            <AddService></AddService>
           </RequireAuth>
         }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
